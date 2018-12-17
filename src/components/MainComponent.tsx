@@ -9,13 +9,6 @@ import Page1Component from "./Page1Component";
 import Page2Component from "./Page2Component";
 
 class MainComponent extends React.Component<IMainProps> {
-    private locationKey;
-
-    public constructor(props){
-        super(props);
-        this.locationKey = props.location.key;
-    }
-
     public render() {
         return (
             <TransitionGroup>
@@ -46,9 +39,6 @@ function mapDispatchToProps(dispatch: Dispatch<any>) {
 function mapStateToProps(appState: any) {
     return {};
 }
-
-
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MainComponent));
 
